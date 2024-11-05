@@ -19,4 +19,8 @@ public class AnimesService {
     public Animes getById(Integer id) {
         return animesRepository.findById(id).orElse(null);
     }
+
+    public Animes saveAnime(Animes anime) {
+        return animesRepository.save(anime);
+    }
 }
