@@ -23,4 +23,14 @@ public class AnimesService {
     public Animes saveAnime(Animes anime) {
         return animesRepository.save(anime);
     }
+
+    public Boolean deleteAnime(Integer id) {
+        Animes anime = animesRepository.findById(id).orElse(null);
+        if(anime != null) {
+            animesRepository.delete(anime);
+            return true;
+        }else {
+            return false;
+        }
+    }
 }

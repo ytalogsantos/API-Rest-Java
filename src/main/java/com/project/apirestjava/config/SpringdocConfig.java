@@ -13,12 +13,12 @@ public class SpringdocConfig {
     @Bean
     public OpenAPI springShopOpenAPI() {
         return new OpenAPI()
-                .info(new Info().title("API Restful para listagem e consulta de animes")
-                .description("Exemplo de API Restful utilizando Java e Spring Boot, com Springdoc para documentação.")
+                .info(new Info().title("Restful API to query anime information.")
+                .description("Restful API with Java, Spring Boot, and Springdoc for documentation.")
                 .version("1.0")
                 .license(new License().name("Apache 3.0").url("http://springdoc.org")))
                 .externalDocs(new ExternalDocumentation()
-                        .description("Repositório da documentação")
+                        .description("Documentation's repository")
                         .url("https://github.com/ytalogsantos"));
 
 
