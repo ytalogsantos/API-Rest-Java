@@ -21,13 +21,7 @@ public class ApirestjavaApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Animes anime = new Animes();
-		//anime.setAnimeId(1);
-		anime.setAnimeTitle("Re:zero");
-		anime.setAnimeEpisodes(16);
+		Animes anime = new Animes(1, "Little Witch Academia", 24);
 		animesService.saveAnime(anime);
-
-		List<Animes> allAnimes = animesService.getAll();
-		System.out.println(allAnimes);
 	}
 }

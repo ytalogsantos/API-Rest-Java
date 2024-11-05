@@ -5,6 +5,16 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "animes")
 public class Animes {
+
+    public Animes() {
+    }
+
+    public Animes(Integer animeId, String animeTitle, Integer animeEpisodes) {
+        this.animeId = animeId;
+        this.animeTitle = animeTitle;
+        this.animeEpisodes = animeEpisodes;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "anime_id")
